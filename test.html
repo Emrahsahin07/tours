@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Незабываемые приключения в Анталии</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Переключатель языков -->
+    <div class="language-switcher">
+        <a href="#" class="language" onclick="switchLanguage('ru')">RU</a> | <a href="#" class="language" onclick="switchLanguage('en')">EN</a>
+    </div>
+
+    <div id="russian-version" lang="ru">
+        <!-- Логотип -->
+        <header>
+            <div class="logo">
+                <img src="logo_ismina.png" alt="Логотип компании">
+            </div>
+        </header>
+
+        <!-- Hero блок -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Забронируйте незабываемое приключение в Анталии!</h1>
+                <button onclick="window.location.href='#tours'">Посмотреть туры</button>
+            </div>
+        </section>
+
+        <!-- Основные туры -->
+        <section id="tours" class="tours">
+            <h2>Наши популярные туры</h2>
+            <div class="tour-card">
+                <img src="jeep_safari.jpg" alt="Джип сафари">
+                <h3>Джип сафари</h3>
+                <p>Окунитесь в мир адреналина и природы на джип сафари.</p>
+            </div>
+            <div class="tour-card">
+                <img src="vip_tahtali.jpg" alt="VIP Тахталы Сафари">
+                <h3>VIP Тахталы Сафари</h3>
+                <p>Испытайте VIP приключение на Тахталы с незабываемыми видами.</p>
+            </div>
+            <div class="tour-card">
+                <img src="yacht_rent.jpg" alt="Аренда яхт">
+                <h3>Аренда яхт</h3>
+                <p>Проведите незабываемый день, арендуя яхту на Средиземном море.</p>
+            </div>
+            <!-- Добавьте другие туры по аналогии -->
+        </section>
+
+        <!-- Контакты и социальные сети -->
+        <footer>
+            <h2>Контакты</h2>
+            <p>Телефон: +90 555 123 4567</p>
+            <p>Email: info@antalya-tours.com</p>
+            <div class="social-media">
+                <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.facebook.com/yourprofile" target="_blank" rel="noopener noreferrer">Facebook</a>
+            </div>
+        </footer>
+    </div>
+
+    <div id="english-version" lang="en" style="display: none;">
+        <!-- Language Switcher -->
+        <div class="language-switcher">
+            <a href="#" class="language" onclick="switchLanguage('ru')">RU</a> | <a href="#" class="language" onclick="switchLanguage('en')">EN</a>
+        </div>
+
+        <!-- Logo -->
+        <header>
+            <div class="logo">
+                <img src="logo.png" alt="Company Logo">
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Book an unforgettable adventure in Antalya!</h1>
+                <button onclick="window.location.href='#tours'">View Tours</button>
+            </div>
+        </section>
+
+        <!-- Main Tours -->
+        <section id="tours" class="tours">
+            <h2>Our Popular Tours</h2>
+            <div class="tour-card">
+                <img src="jeep_safari.jpg" alt="Jeep Safari">
+                <h3>Jeep Safari</h3>
+                <p>Immerse yourself in the world of adrenaline and nature with our jeep safari.</p>
+            </div>
+            <div class="tour-card">
+                <img src="vip_tahtali.jpg" alt="VIP Tahtali Safari">
+                <h3>VIP Tahtali Safari</h3>
+                <p>Experience a VIP adventure on Tahtali with unforgettable views.</p>
+            </div>
+            <div class="tour-card">
+                <img src="yacht_rent.jpg" alt="Yacht Rental">
+                <h3>Yacht Rental</h3>
+                <p>Spend an unforgettable day renting a yacht on the Mediterranean Sea.</p>
+            </div>
+            <!-- Add more tours accordingly -->
+        </section>
+
+        <!-- Contacts and Social Media -->
+        <footer>
+            <h2>Contacts</h2>
+            <p>Phone: +90 555 123 4567</p>
+            <p>Email: info@antalya-tours.com</p>
+            <div class="social-media">
+                <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.facebook.com/yourprofile" target="_blank" rel="noopener noreferrer">Facebook</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            if (lang === 'ru') {
+                document.body.lang = 'ru';
+                document.getElementById('russian-version').style.display = 'block';
+                document.getElementById('english-version').style.display = 'none';
+            } else if (lang === 'en') {
+                document.body.lang = 'en';
+                document.getElementById('russian-version').style.display = 'none';
+                document.getElementById('english-version').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
+
+<!-- styles.css -->
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .language-switcher {
+        text-align: right;
+        padding: 10px;
+        background-color: #f4f4f4;
+    }
+
+    .logo img {
+        width: 150px;
+        margin: 20px;
+    }
+
+    .hero {
+        background-image: url('hero_image.jpg');
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        text-align: center;
+        padding: 100px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content button {
+        padding: 15px 30px;
+        font-size: 16px;
+        background-color: #ff6b6b;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    .tours {
+        padding: 40px;
+        text-align: center;
+    }
+
+    .tour-card {
+        display: inline-block;
+        margin: 20px;
+        width: 300px;
+    }
+
+    .tour-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .social-media a {
+        color: #ff6b6b;
+        margin: 0 10px;
+        text-decoration: none;
+    }
+</style>
